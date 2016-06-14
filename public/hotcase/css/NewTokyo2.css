@@ -1,0 +1,323 @@
+@charset "utf-8";
+
+#main{
+	background: url(../images/NT2/main.jpg) center center;
+	background-size: cover;
+	height: 250px;
+}
+#subMenu2{
+	height: 22px;
+	padding: 24px 0;
+	text-align: center;
+}
+#subMenu2 li{
+	display: inline-block;
+	margin-top: 5px;
+	border: 1px solid #999;
+	padding: 0 8px;
+	cursor: pointer;
+}
+#subMenu2 li:hover{
+	background-color: rgb(240,180,0);
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+
+#night{
+	position: relative;
+}
+#day > * , #night > * , #detail > * , #detail2 > *{
+	float: left;
+}
+.L85{
+	width: 85%;
+}
+.L15{
+	position: relative;
+	background: url(../images/NT2/wood.jpg);
+	background-size: contain;
+	width: 15%;
+	text-align: center;
+	color: #FFF;
+}
+.L15 *:not(img){
+	margin: 20px 0;
+}
+.L15 img{
+	margin-top: 60px;
+	width: 70%;
+}
+.L15 h2{
+	color: #CCC;
+}
+
+.collapseMB{
+	display: none;
+}
+#day .content{
+	background: url(../images/NT2/dayT.jpg) left bottom no-repeat;
+	background-size: cover;
+	padding: 30px 5%;
+}
+.content p{
+	margin: 30px auto;
+	width: 90%;
+	line-height: 28px;
+	letter-spacing: 1px;
+	text-align: justify;
+}
+.content h3{
+	margin: 10px auto;
+	width: 90%;
+	color: rgb(81,115,0);
+}
+#night .content{
+	background: #000;
+	background-size: cover;
+	width: 80%;
+	padding: 30px 10%;
+	color: #FFF;
+}
+
+/* Tree */
+#day .tree{
+	width: 100%;
+}
+.tree{
+	position: absolute;
+	bottom: 0; left: 0;
+}
+#t3{
+	width: 20%;
+}
+#t4{
+	left: inherit; right: 0;
+	width: 20%;
+}
+#t5{
+	left: 0;
+	width: 10%;
+}
+#t6 , #t7{
+	left: inherit; right: 0;
+	width: 10%;
+}
+
+/* air */
+.NT2air{
+	font-size: 0;
+}
+.NT2air img{
+	width: 100%;
+}
+.down{
+	overflow: auto;
+}
+.down > img{
+	position: absolute;
+	z-index: 3;
+	top: -21px; left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+.down .text{
+	background-color: #CCC;
+	width: 100%;
+	padding: 20px 0;
+
+	font-weight: bold;
+	text-align: center;
+	color: #FFF;
+}
+.text h3{
+	margin: 10px auto;
+	color: rgb(81,115,0);
+}
+.closeText{	
+	margin: 30px auto;
+	width: 90%;
+	line-height: 28px;
+	letter-spacing: 1px;
+	text-align: justify;
+	color: #000;
+}
+
+#detail{
+	position: relative;
+	background-color: rgb(0,49,46);
+	overflow: hidden;
+}
+.L50{
+	width: 50%;
+}
+#detail .intro{
+	position: relative;
+	background: url(../images/NT2/d2.jpg) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	padding: 20px 0;
+	text-align: center;
+
+	overflow: auto;
+}
+.intro *{
+	margin: 5px 0;
+}
+#detail .intro2{
+	position: relative;
+	width: 90%;
+	padding: 10% 5%;
+
+	color: #FFF;
+}
+#detail .intro2 h3{
+	padding-left: 40px;
+}
+.d2{
+	position: absolute;
+	bottom: 0; left: 0;
+	width: 50%;
+}
+.d3{
+	background-color: #000;
+	margin-left: 50%;
+}
+.intro2 img{
+	float: left;
+}
+.intro2 h3{
+	width: 150px;
+	padding-left: 12px;
+	letter-spacing: 1px;
+	color: rgb(0,205,149);
+}
+.intro2 p{
+	margin: 5px 0 30px 40px;
+	line-height: 28px;
+	letter-spacing: 1px;
+	text-align: justify;
+}
+#detail .intro2 .title{
+	margin: 0 auto 30px;
+}
+#detail .intro2 .title h3{
+	width: calc(100% - 40px);
+	color: rgb(81,115,0);
+}
+
+#detail2{
+	position: relative;
+	background-color: #000;
+}
+#detail2 .L50{
+	background-color: #666;
+	width: 40%;
+	padding: 5%;
+	color: #FFF;
+}
+#detail2 .L50 h3{
+	margin-left: 28px;
+}
+.L100{
+	background-color: #000;
+	width: 100%;
+	font-size: 0;
+}
+#detail2 .L80{
+	width: 80%;
+}
+
+@media (min-width: 981px){
+
+.d2{
+	width: 400px;
+}
+#detail2 .L50{
+	height: 246px;
+}
+
+}
+
+@media (max-width: 980px){
+
+#detail2{
+	background-color: #666;
+}
+#detail2 .L50{
+	height: inherit;
+}
+
+}
+
+@media (max-width: 768px){
+
+.L15 img{
+	margin-top: 20px;
+}
+.L15 *:not(img){
+	margin: 5px 0;
+}
+.L50{
+	position: relative;
+	width: 100%;
+}
+
+#detail .intro2 , #detail2 .L50 , .down .text{
+	display: none;
+}
+#detail .intro2.close , #detail2 .L50.close , .down .text.close{
+	display: block;
+}
+
+.d3{
+	margin-left: 0;
+}
+
+#day .content , #night .content {
+	display: none;
+	height: 111px;
+}
+#day .content.close , #night .content.close{
+	display: block;
+	height: inherit;
+}
+.collapseMB{
+	display: block;
+	overflow: inherit !important;
+	background-color: #CCC;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+#night .collapseMB , #detail .collapseMB{
+	background-color: #111;
+	color: #FFF;
+}
+
+}
+
+@media (max-width: 480px){
+
+#subMenu2{
+	height: 44px;
+}
+.L85{
+	width: 75%;
+}
+.L15{
+	width: 25%;
+}
+
+#detail2 .L50:first-child{
+	padding-top: 5%;
+}
+#detail2 .L50{
+	width: 90%; height: inherit;
+	padding: 0 5%;
+}
+.tree{
+	display: none;
+}
+
+}

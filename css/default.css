@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; font-family: Microsoft JhengHei, arial; }
+a{ text-decoration: none; color: #000; }
+.clearfix:after {  
+	content: ".";
+	display: block;
+	height: 0;
+	font-size: 0; /* exception */
+	clear: both;
+	visibility: hidden;
+}
+
+body{
+	overflow-x: hidden;
+}
+body.modal-open{
+	overflow-y: hidden;
+}
+nav{
+	position: relative; z-index: 2;
+	background-color: #d1c0a5;
+	padding: 20px;
+}
+nav .PC ul{
+	float: left;
+}
+nav .PC li{
+	list-style-type: none;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 20px;
+}
+nav .PC li img{
+	margin: 0 10px;
+	border-radius: 17px;
+	box-shadow: 2px 2px 5px #333;
+	vertical-align: middle;
+}
+nav .fb{
+	float: right;
+}
+
+/* Mobile */
+nav .MB{
+	display: none;
+}
+nav #modal{
+	display: none;
+}
+
+/* main */
+.titlePic{
+	padding: 50px 0 30px;
+	text-align: center;
+}
+.titlePic img{
+	max-width: 100%;
+}
+
+
+/* footer */
+footer{
+	background-color: #59493f;
+	padding: 10px 30px;
+	color: #FFF;
+}
+footer .info{
+	float: left;
+	margin: 10px 0;
+}
+footer .info img{
+	margin: 0 8px;
+}
+footer .info span{
+	margin-right: 10px;
+}
+footer .copyright{
+	float: right;
+	width: 400px;
+}
+footer .copyright img{
+	float: right;
+	margin: 7px 0;
+}
+footer .copyright .FB{
+	display: none;
+}
+footer .copyright span{
+	display: inline-block;
+	color: #a8a19e;
+	font-size: 12px;
+}
+footer .copyright .EN{
+	color: #c7c4c1;
+	font-size: 14px;
+}
+
+/* menu */
+@media (max-width: 980px){
+
+nav .PC{
+	display: none;
+}
+nav .MB{
+	display: block;
+	text-align: right;
+}
+nav .close{
+	position: absolute;
+	right: 20px;
+	font-size: 40px;
+	cursor: pointer;
+}
+#modal{
+	display: none; opacity: 0;
+	overflow-y: auto;
+	position: fixed;
+	top: 0; left: 0;
+	background: url(../img/index/bg2.jpg);
+	width: 100%; height: calc(100% - 60px);
+	padding: 30px 0;
+
+	color: #000;
+	font-size: 24px;
+	text-align: center;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+#modal.in{
+	display: block; opacity: 1;	
+}
+#modal > img{
+	margin: 10px 0;
+}
+#modal .ul1 > li{
+	list-style-type: none;
+	border-top: 1px solid #BBB;
+	padding: 20px 0;
+}
+#modal .ul1 > li:first-child{
+	border: none;
+}
+#modal li p{
+	display: inline-block;
+	cursor: pointer;
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+
+
+#modal li.thisPage p{
+	color: #8ab125;
+	padding: 30px 0;
+}
+#modal li.thisPage .ul2{
+	visibility: visible;
+	opacity: 1;
+	max-height: 216px;
+}
+
+#modal .ul2{
+	visibility: hidden;
+	opacity: 0;
+	margin: 0 auto;
+	width: 165px; max-height: 0;
+	color: #000;
+	text-align: left;
+	transition: 1s;
+	-webkit-transition: 1s;
+}
+#modal .ul2 li{
+	list-style-type: none;
+	position: relative;
+	padding: 20px 0;
+}
+#modal .ul2 li:hover a{
+	color: #825f00;
+}
+#modal .ul2 li:hover a:after{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	background: url(../img/onion.png) no-repeat;
+	background-size: 32px 32px;
+	margin-left: 5px;
+	width: 32px; height: 32px;
+}
+#modal > p{
+	margin: 20px 0;
+	color: #AAA;
+	font-size: 12px;
+}
+#modal > p span{
+	display: block;
+}
+
+
+@media (max-width: 768px){
+
+footer{
+	text-align: center;
+}
+footer .info , footer .copyright{
+	float: none;
+	margin: 0 auto;
+}
+footer .info img, footer .copyright img{
+	float: none;
+	display: block;
+	margin: 20px auto;
+}
+footer .copyright .FB{
+	display: block;
+}
+
+}
+@media (max-width: 480px){
+
+footer .copyright{
+	width: inherit;
+}
+
+}

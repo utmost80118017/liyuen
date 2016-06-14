@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>米築</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="css/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css">
+
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/Crawler.js"></script>
+    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
+
+</head>
+<body>
+
+<div id="container">
+	<nav>
+        <section class="clearfix">
+            <div id="logo"><a href="index.html"><img src="images/index/logo.png"></a></div>
+            <div id="slogan">
+                <img src="images/index/slogan.png">
+                <img src="images/index/fb_icon.png">
+                
+                <div>
+                    <input type="text" placeholder="SEARCH" />
+                    <img src="images/search_icon.png">
+                </div>
+            </div>
+        </section>
+        <div>
+            <ul>
+                <li><a href="news.html"><p>NEWS</p><span>地產動態</span></a></li>
+                <li><a href="case.html"><p>CASE</p><span>新案訊息</span></a></li>
+                <li><a href="deco.html"><p>DECO</p><span>生活美學</span></a></li>
+                <li><a href="people.html"><p>PEOPLE</p><span>人物觀點</span></a></li>
+                <li><a href="about.html"><p>ABOUT</p><span>關於米築</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <img id="toTop" src="images/toTop.png">
+
+    <div id="main">
+        <div class="flex">
+            <div class="flexslider fs1">
+                <ul class="slides">
+                    <li>
+                        <a href=""><img src="images/index/b1.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/index/b1.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/index/b1.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/index/b1.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/index/b1.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="images/index/b1.jpg" /></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="viewmore"><img src="images/index/viewmore.png"></div>
+        </div>
+
+        <div class="row-marquee">
+            <img src="images/row.png">
+            <div class="marquee" id="m">
+                <img src="images/case/case1.jpg">
+                <img src="images/case/case2.jpg">
+                <img src="images/case/case3.jpg">
+                <!-- <img src="images/case/case1.jpg">
+                <img src="images/case/case2.jpg">
+                <img src="images/case/case3.jpg">
+                <img src="images/case/case1.jpg">
+                <img src="images/case/case2.jpg">
+                <img src="images/case/case3.jpg"> -->
+            </div>
+            <img src="images/row.png">
+        </div>      
+    </div>
+
+    <section id="ad">
+        <div class="clearfix">
+            <div class="L60">
+                <div class="flexslider fs2">
+                    <ul class="slides">
+                        <li><a href=""><img src="images/index/ad1.jpg"></a></li>
+                        <li><a href=""><img src="images/case/case1.jpg"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="L20">
+                <div class="flexslider fs2">
+                    <ul class="slides">
+                        <li><a href=""><img src="images/index/ad2.jpg"></a></li>
+                        <li><a href=""><img src="images/index/ad3.jpg"></a></li>
+                        <li><a href=""><img src="images/index/ad4.jpg"></a></li>
+                        <li><a href=""><img src="images/index/ad5.jpg"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="L20">
+                <div class="flexslider fs2">
+                    <ul class="slides">
+                        <li><a href=""><img src="images/index/ad3.jpg"></a></li>
+                        <li><a href=""><img src="images/index/ad4.jpg"></a></li>
+                        <li><a href=""><img src="images/index/ad5.jpg"></a></li>
+                        <li><a href=""><img src="images/index/ad2.jpg"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="L20">
+                <div class="flexslider fs2">
+                    <ul class="slides">                            
+                        <li><a href=""><img src="images/index/ad4.jpg"></a></li>
+                        <li><a href=""><img src="images/index/ad5.jpg"></a></li>
+                        <li><a href=""><img src="images/index/ad2.jpg"></a></li>
+                        <li><a href=""><img src="images/index/ad3.jpg"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="L20">
+                <div class="flexslider fs2">
+                    <ul class="slides">
+                        <li><a href=""><img src="images/index/ad5.jpg"></a></li>
+                        <li><a href=""><img src="images/index/ad2.jpg"></a></li>
+                        <li><a href=""><img src="images/index/ad3.jpg"></a></li>
+                        <li><a href=""><img src="images/index/ad4.jpg"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="news">
+        <div class="content clearfix">
+            <img src="images/index/news_bg2.jpg">
+            <p class="summary">
+                <span class="EN">NEWS</span>
+                <span class="CH"> / 地產動態</span>
+                <span class="text">隨著大新竹多元面相紛至沓來，竹北台科大重劃區正以嶄新的地貌舞動一種巍然的地勢氣韻。東啟自強南路、西到省道中華路、南以頭前溪、北至福興路、成功路口整體佔地面積約20.4公頃，境內擁有台科大竹北分校、地方法院預定地、文小、機關、園道、公園、兒童遊戲場、運動場…等多項公共設施優勢凝聚，如同台北仁愛特區，吸納領袖矚目的眼界 儼然成為大新竹地區最高指標豪宅聚落高峰匯。</span>
+                <a href="news.html"><span class="link">MORE</span></a>
+            </p>
+            <div>
+                <img src="images/index/news1.jpg">
+                <img src="images/index/news2.jpg">
+            </div>
+        </div>
+    </div>
+    <div class="row-marquee">
+        <img src="images/row.png">
+        <div class="marquee" id="m2">
+            <img src="images/case/case1.jpg">
+            <img src="images/case/case2.jpg">
+
+        </div>
+        <img src="images/row.png">
+    </div>
+
+    <div id="case">
+        <div class="select">
+            <img class="left" src="images/index/case_arrowL.png">
+            <img class="right" src="images/index/case_arrowR.png">
+            <div class="slick4">
+                <div class="area"><p>全部區域</p><p>ALL</p></div>
+                <div class="area"><p>北部</p><p>NORTH</p></div>
+                <div class="area"><p>中部</p><p>MIDLAND</p></div>
+                <div class="area"><p>南部</p><p>SOUTH</p></div>
+                <div class="area"><p>東部</p><p>EAST</p></div>
+            </div>            
+        </div>
+        
+        <div class="slick">
+            <div class="slick2">
+                <img src="images/index/case1.jpg">
+
+                <div class="detail">
+                    <img src="images/index/case_close.png">
+
+                    <p><span>富宇雲悅</span></p>
+                    <ul>
+                        <li>投資興建：海悅國際</li>
+                        <li>基地面積：886 坪</li>
+                        <li>樓層：海悅國際</li>
+                        <li>戶數：112戶</li>
+                        <li>坪數：56-62坪</li>
+                        <li>格局：地上15層/地下3層</li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li>公設比：30.5%</li>
+                        <li>單價：2000萬</li>
+                        <li>總價：50億</li>
+                        <li>基地位置:台北市文山區忠順街二段85巷15號</li>
+                        <li>接待中心：台北市文山區忠順街二段85巷15號</li>
+                        <li>洽詢電話：(02)2356-8888</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slick2">
+                <img src="images/index/case1.jpg">
+
+                <div class="detail">
+                    <img src="images/index/case_close.png">
+
+                    <p><span>富宇雲悅</span></p>
+                    <ul>
+                        <li>投資興建：海悅國際</li>
+                        <li>基地面積：886 坪</li>
+                        <li>樓層：海悅國際</li>
+                        <li>戶數：112戶</li>
+                        <li>坪數：56-62坪</li>
+                        <li>格局:地上15層/地下3層</li>
+                        <li></li>
+                    </ul>
+                    <ul>
+                        <li>公設比：30.5%</li>
+                        <li>單價：2000萬</li>
+                        <li>總價：50億</li>
+                        <li>基地位置:台北市文山區忠順街二段85巷15號</li>
+                        <li>接待中心：台北市文山區忠順街二段85巷15號</li>
+                        <li>洽詢電話：(02)2356-8888</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <button id="prev"></button>
+        <button id="next"></button>
+
+        <p class="summary">
+            <span class="EN">CASE</span>
+            <span class="CH"> / 新案訊息</span>
+            <a href="case.html"><span class="link">MORE</span></a>
+        </p>            
+    </div>
+    <div class="row-marquee">
+        <img src="images/row.png">
+        <div class="marquee" id="m3">
+            <img src="images/case/case1.jpg">
+            <img src="images/case/case2.jpg">
+            <img src="images/case/case3.jpg">
+            <img src="images/case/case1.jpg">
+            <img src="images/case/case2.jpg">
+            <img src="images/case/case3.jpg">
+        </div>
+        <img src="images/row.png">
+    </div>
+
+    <section id="deco">
+        <div class="flexslider fs1">
+            <ul class="slides">
+                <li>
+                    <img src="images/index/deco1.jpg" />
+                </li>
+                <li>
+                    <img src="images/index/deco1.jpg" />
+                </li>
+                <li>
+                    <img src="images/index/deco1.jpg" />
+                </li>
+            </ul>
+        </div>
+        <p class="summary">
+            <span class="EN">DECO</span>
+            <span class="CH"> / 生活美學</span>
+            <span class="text">ETABS是由CSI公司開發研製的房屋建築結構分析與設計軟體，ETABS已有近三十年的發展歷史....</span>
+            <a href="deco.html"><span class="link">MORE</span></a>
+        </p>
+    </section>
+
+    <section class="row-ad">
+        <img src="images/index/ad6.jpg" />
+    </section>
+
+    <section id="people" class="clearfix">
+        <p class="summary">
+            <span class="EN">PEOPLE</span>
+            <span class="CH"> / 人物觀點</span>
+            <span class="text">制震壁通常裝在上下樓層的橫樑間，是一種槽化的阻尼器，由一片內部鋼板和兩片外部鋼板所構成的U形結構，在內外鋼板間注入高黏性的特殊物質，當地震發生時，結構的上、下樑會產生反方向的錯動此一錯動會使制震壁的鋼板帶動內在的高分子消能材料，使其產生剪力變形地震的能量藉由高分子消能材料內的摩擦行為，轉換成熱能而達到消能減震的效果。高分子消能材料的特性同具有阻尼（C值）....</span>
+            <a href="people.html"><span class="link">MORE</span></a>
+        </p>
+        <div>
+            <img src="images/index/p1.jpg">
+            <img src="images/index/p2.jpg">
+        </div>
+    </section>
+
+    <section class="row-ad">
+        <img src="images/index/ad7.jpg" />
+    </section>
+
+    <div id="about" class="clearfix">
+        <div><img src="images/index/about_bg2.png"></div>
+        <p class="summary">            
+            <span class="EN">ABOUT US</span>
+            <span class="CH"> / 關於米築</span>
+            <span class="text">ETABS是由CSI公司開發研製的房屋建築結構分析與設計軟體ETABS已有近三十年的發展歷史，是由美國乃至全球公認的高層結構計算程式，在世界範圍內廣泛應用，是房屋建築結構分析與設計軟體的業界標準。「美麗華。仁愛」主結構體耐震係數已高達0.33g經制震配置其耐震能力約提昇20%整體耐震係數提高皮國家最高標準0.33g以上。</span>
+            <a href="about.html"><span class="link">MORE</span></a>
+        </p>
+    </div>
+
+    <footer>
+        <div>
+            <section>
+                <a href="news.html"><img src="images/news.png"></a>
+                <a href="case.html"><img src="images/case.png"></a>
+                <a href="deco.html"><img src="images/deco.png"></a>
+                <a href="people.html"><img src="images/people.png"></a>
+                <a href="about.html"><img src="images/about.png"></a>
+            </section>
+        </div>
+        <section><img src="images/footer.png"></section>
+    </footer>
+</div>
+</body>
+</html>

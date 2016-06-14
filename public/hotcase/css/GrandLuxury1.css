@@ -1,0 +1,254 @@
+@charset "utf-8";
+
+#main{	
+	background: url(../images/GL1/main.jpg) center bottom no-repeat;
+	background-size: cover;
+	height: 300px;	
+}
+#subMenu1{
+	height: 22px;
+	padding: 24px 0;
+	text-align: center;
+}
+#subMenu1 li{
+	display: inline-block;
+	border: 1px solid #999;
+	padding: 0 8px;
+	cursor: pointer;
+}
+#subMenu1 li:hover{
+	background-color: rgb(240,180,0);
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+.collapseMB{
+	display: none;
+}
+#day1{
+	font-size: 0;
+}
+#day1 img{
+	width: 100%;
+}
+#day2 > div , #living2 > div{
+	float: left;
+	height: 340px;
+}
+#d2L{
+	background: url(../images/GL1/day2.jpg);
+	background-size: cover;
+	width: calc(70% - 60px);
+	padding: 30px;
+	color: #FFF;
+}
+#d2L *{
+	margin: 25px 0;
+}
+#d2L span:nth-child(1) , #traffic2 > span:nth-child(1){
+	font-size: 40px;
+}
+#d2L span:nth-child(2) , #rtaffic2 > span:nth-child(2){
+	font-size: 18px;
+}
+#d2L h3 , #traffic2 h3{
+	width: 330px; max-width: 100%;
+	text-align: left;
+	color: rgb(211,173,101);
+}
+#traffic2 h3{
+	margin-left: auto;
+	margin-right: auto;
+}
+#d2L p{
+	text-align: justify;
+	line-height: 28px;
+	letter-spacing: 1px;
+}
+div#d2R{
+	background: url(../images/GL1/day3.jpg) center no-repeat;
+	background-size: cover;
+	width: 30%; height: 400px;
+}
+#slideShow{
+	overflow: hidden;
+}
+#traffic1{
+	position: relative;
+	right: 100%;
+	width: 200%;
+	-webkit-animation: move 20s infinite linear; /* Chrome, Safari, Opera */ 
+    animation: move 20s infinite linear;
+}
+@-webkit-keyframes move {
+    0% {right: 100%;}
+    100% {right: 0;}
+} 
+
+/* Standard syntax */ 
+@keyframes move {
+  	0% {right: 100%;}
+    100% {right: 0;}
+}
+#traffic1 img{
+	float: left;
+	width: calc(99.99%/6 );
+}
+#traffic2{
+	background: url(../images/GL1/traffic4.jpg) center center no-repeat;
+	background-size: cover;
+	padding: 5% 3%;
+
+	color: #FFF;
+	text-align: center;
+}
+#traffic2 *{
+	margin: 10px 0;
+}
+
+#traffic2 .t2{
+	margin: 0 auto;
+	max-width: 1030px;
+}
+#traffic2 .t2 span{
+	float: left;
+	line-height: 28px;
+	letter-spacing: 1px;
+}
+#traffic2 p{
+	float: left;
+	width: calc(100% - 110px);
+	text-align: justify;
+	line-height: 28px;
+	letter-spacing: 1px;
+}
+#living1{
+	background-color: rgb(49,49,49);
+	padding: 5%;
+}
+#living1 img{
+	width: 100%;
+}
+#l2L{
+	background-color: #BBB;
+	width: 30%;
+	text-align: center;
+}
+#l2L h1{
+	margin-top: 150px;
+}
+#l2L h1 span{
+	font-size: 18px;
+}
+div#l2R{
+	background: url(../images/GL1/living2.jpg) center center no-repeat;
+	background-size: cover;
+	width: calc(70% - 60px); height: 200px;
+	padding: 70px 30px;
+	color: #FFF;
+}
+#l2R h3{
+	margin: 20px auto;
+	width: 600px; max-width: 100%;
+	color: rgb(211,173,101);
+}
+#l2R p{
+	margin: 0 auto;
+	width: 600px; max-width: 100%;
+	line-height: 28px;
+	letter-spacing: 1px;
+	text-align: justify;
+}
+
+@media (max-width: 768px){
+
+/* collapseMB */
+#day2 .collapseMB , body > .collapseMB{
+	display: block; overflow: auto;
+	background-color: #BBB;
+	height: inherit;
+	text-align: center;
+	color: #000;
+}
+.collapseMB *{
+	margin: 10px 0;
+}
+.collapseMB img:first-child{
+	cursor: pointer;
+}
+.collapseMB p{
+	margin: 10px auto;
+	border: 1px solid;
+	width: 120px;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+}
+#traffic2 , #living2{
+	display: none;
+}
+div#d2L.close , #traffic2.close , #living2.close{
+	display: block;
+}
+
+/* Original */
+#day2 > div{
+	height: inherit;
+}
+#day2 > div, #traffic1 img , #living2 > div{
+	float: none;	
+}
+#day1{
+	background: url(../images/GL1/day1.jpg) 15% 80% no-repeat;
+	background-size: cover;
+}
+div#d2L{
+	display: none;
+	width: calc(100% - 60px);
+}
+div#d2R{
+	width: 100%;
+}
+#traffic1{
+	font-size: 0;
+	right: 100%;
+	-webkit-animation-play-state: paused; /* Chrome, Safari, Opera */
+    animation-play-state: paused;
+}
+/*@-webkit-keyframes move768 {
+    0% {right: 175%;}
+    100% {right: 0;}
+} */
+
+/* Standard syntax */ 
+/*@keyframes move768 {
+  	0% {right: 175%;}
+    100% {right: 0;}
+}*/
+#l2L{
+	width: 100%;
+}
+#traffic2 .t2{
+	width: 100%;
+}
+div#l2L{
+	height: 70px;
+	padding: 17px 0;
+}
+#l2L h1{
+	display: block;
+	margin-top: 0;
+}
+div#l2R{
+	width: calc(100% - 60px);
+	height: inherit;
+}
+div#l2R *{
+	float: none;
+	width: 100%;
+}
+div#l2R span{
+	display: block;
+	margin-top: 20px;
+}
+
+}

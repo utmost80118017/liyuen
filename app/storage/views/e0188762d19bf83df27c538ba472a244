@@ -1,0 +1,7 @@
+
+<?php foreach($posts as $post): ?>
+<?php echo HTML::link("/mpage/".$post->id, $post->name); ?>
+
+<br>
+
+<?php endforeach; ?>

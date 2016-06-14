@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+#container > .flexslider{
+	background-color: rgb(23,83,78);
+}
+.flexslider{
+	margin: 0;
+	border: none;
+}
+.flexslider img.logo{
+	position: absolute; z-index: 1;
+	top: 50%; left: 50%;
+	-webkit-transform: translate(-50% , -50%);
+	transform: translate(-50% , -50%);
+	width: 17%;
+	cursor: pointer;
+}
+.flex-control-nav{
+	bottom: 20px;
+}
+.flex-control-paging li a{
+	background-color: rgba(255,255,255,0.5);
+}
+.flex-control-paging li a:hover{
+	background-color: rgba(255,255,255,0.7);	
+}
+.flex-control-paging li a.flex-active{
+	background-color: rgba(255,255,255,1);	
+}
+
+#golden , #classic , #p1{
+	background-color: #000;
+	width: 100%;
+	font-size: 0;
+	overflow: hidden;
+}
+.L50{
+	float: left;
+	width: 50%;
+	overflow: hidden;
+}
+.R25{
+	float: right;
+	width: 25%;
+	overflow: hidden;
+}
+.scale11 img{
+	width: 100%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+.scale11 img:hover{
+	-webkit-transform: scale(1.1,1.1);
+	-webkit-transition: 0.5s;
+
+	transform: scale(1.1,1.1);
+	transition: 0.5s;
+}
+.R50{
+	float: right;
+	width: 50%;
+}
+div.L50 , div.R50 , #p1{
+	position: relative;
+}
+div.L50 > img , div.R50 > img , #p1 > img{
+	position: relative;
+	width: 100%;
+}
+.gText , .gText2{
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 90%;
+	padding: 5%;
+}
+.gText > *{
+	float: left;	
+}
+.gText2 > *{
+	float: right;
+}
+.gText p{
+	width: calc(99% - 25px);
+	padding-left: 10px;
+
+	font-size: 8px;
+	text-align: justify;
+	color: rgba(255,255,255,0.3);
+}
+.gText2 p{
+	width: calc(99% - 25px);
+	padding-right: 10px;
+
+	font-size: 8px;
+	text-align: justify;
+	color: rgba(0,0,0,0.6);
+}
+.gText p img , .gText2 p img{
+	width: 10px;
+}
+.gText span{
+	padding-left: 5px;
+	font-size: 14px;
+	color: #FFF;
+}
+.gText2 span{
+	padding-left: 5px;
+	font-size: 14px;
+	color: #000;
+}
+.gText a , .gText2 a{
+	display: block;
+	margin: 10px 0 0;
+	text-align: center;
+}
+#classic , #public , #p2{
+	background-color: rgb(23,83,78);
+}
+#classic .R50{
+	background: url(../images/NewTokyo/c3-1.jpg) center center;
+	background-size: contain;
+}
+#p1{
+	float: right;
+	width: 25%
+}
+#p2{
+	float: right;
+	width: 75%
+}
+
+#video{
+	position: relative;
+	background-color: #000;
+	width: 90%;
+	padding: 5%;
+}
+#video > img{
+	margin: 0 0.3%;
+	width: 32%;
+}
+#video .gText{
+	position: relative;
+	margin: 0 auto;
+	max-width: 500px;
+	-webkit-transform: translateY(0);
+	transform: translateY(0);
+}
+#video .gText > img{
+	float: none;
+	display: block;
+	margin: 0 auto 10px;
+}
+#video .gText > p{
+	width: 100%;
+	padding-left: 0;
+}
+.viewAll480{
+	display: none;
+}
+
+@media (max-width: 1100px){
+
+#video > img{
+	margin: 0 0.5%;
+	width: 99%;
+}
+
+}
+
+@media (max-width: 980px){
+
+#golden .L50{
+	width: 100%;
+}
+.R25{
+	width: 50%;
+}
+#golden .gText p{
+	width: 93%;
+}
+#classic{
+	background-color: #C9C9C9;
+}
+
+}
+
+@media (max-width: 768px){
+
+.R25 , .R50 , .L50 , #p1 , #p2{
+	width: 100%;
+}
+div.L50 > img , div.R50 > img {
+	width: 100%;
+}
+
+.L50 > img , #p1 , #p1 > img{
+	height: 200px;
+}
+
+}
+
+@media (max-width: 480px){
+
+.flex-control-nav{
+	bottom: 5px;
+}
+#golden .R25 , #classic .R50 , #video > img:nth-child(2) , #video > img:nth-child(3) , .gText > img:first-child , .gText2 > img:first-child{
+	display: none;
+}
+.gText , .gText2{
+	text-align: center;
+}
+ #golden .gText p, .gText p , .gText2 p{
+	width: 100%;
+	padding: 0;
+}
+.gText a span, .gText2 a span{
+	font-size: 18px;
+}
+.gText .viewAll480 , .gText2 .viewAll480{
+	float: none;
+	display: block;
+	margin: 0 auto 10px;
+}
+
+}

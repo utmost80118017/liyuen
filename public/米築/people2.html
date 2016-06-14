@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>米築</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/news.css">
+    <link rel="stylesheet" type="text/css" href="css/people.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/Crawler.js"></script>
+    <script src="http://malsup.github.com/jquery.cycle2.js"></script>
+    
+    <script src="js/script.js"></script>
+
+    <style type="text/css">
+
+    article{
+        width: 100%;
+    }
+    .bg{
+        font-size: 0;
+    }
+    .bg img{
+        width: 100%;
+    }
+    .people{
+        margin-top: 30px;
+        max-width: 94%;
+        padding: 0 3%;
+    }
+    .people > img{
+        float: left;
+        width: 30%;
+    }
+    .people .intro{
+        float: left;
+        width: 60%;
+        padding: 0 5%;
+        text-align: left;
+    }
+    .people .name{
+        margin: 0;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .intro .subTitle{
+        display: inline-block;
+        margin: 20px 0;
+        width: 100%;
+        color: #b28850;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .intro .subTitle img{
+        float: right;
+    }
+    .intro > p{
+        margin: 20px 0;
+        text-align: justify;
+    }
+
+    @media (max-width: 768px){
+
+    .people > img{
+        float: none;
+        margin: 0 auto;
+        width: 60%;
+    }
+    .people .intro{
+        float: left;
+        width: 90%;
+    }
+
+    }
+
+    </style>
+</head>
+<body>
+<div id="container">
+	<nav>
+        <section class="clearfix">
+            <div id="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+            <div id="slogan">
+                <img src="images/slogan.png">
+                
+                <div>
+                    <input type="text" placeholder="SEARCH" />
+                    <img src="images/search_icon.png">
+                </div>
+            </div>
+        </section>
+        <div>
+            <ul>
+                <li><a href="news.html"><p>NEWS</p><span>地產動態</span></a></li>
+                <li><a href="case.html"><p>CASE</p><span>新案訊息</span></a></li>
+                <li><a href="deco.html"><p>DECO</p><span>生活美學</span></a></li>
+                <li><a href="people.html"><p>PEOPLE</p><span>人物觀點</span></a></li>
+                <li><a href="about.html"><p>ABOUT</p><span>關於米築</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="top">
+        <div class="flexslider fs2">
+            <ul class="slides">
+                <li><a href=""><img src="images/news/main.jpg"></a></li>
+                <li><a href=""><img src="images/news/main.jpg"></a></li>
+                <li><a href=""><img src="images/news/main.jpg"></a></li>
+                <li><a href=""><img src="images/news/main.jpg"></a></li>
+            </ul>
+        </div>
+    </div>
+    <img id="toTop" src="images/toTop.png">
+
+    <div class="row-marquee">
+        <img src="images/row.png">
+        <div class="marquee" id="m"><img src="images/m1.jpg"></div>
+        <img src="images/row.png">
+    </div>
+
+    <div id="main" class="clearfix">
+
+        <article>
+            <div class="bg"><img src="images/people/b3.jpg"></div>
+
+            <div class="people clearfix">
+                <img src="images/people/p1.jpg">
+
+                <div class="intro">
+                    <div class="name"><p>- 地產美女 -</p><span>楊芳綾</span></div>
+                    <span class="subTitle">8年級新鮮人 努力跟上團隊腳步<img src="images/people/fb_icon.png"></span>
+                    <p>從原本的幼教系統，轉踏入生硬的房地產工作，入行僅年餘的楊芳綾絲毫沒有格格不入，認真、肯學及勇於嘗試的態度，使她迅速融入團體當中，並且期待著第一戶成交能趕緊到來。</p>
+                    <p>8年級、年僅24歲的楊芳綾，言談之中仍不時透露出青澀，少了點老成反而多了份真誠；大學時期便從事幼稚園助教工作的她，由於本身並非就讀相關科系，因此不具備幼教資格，所以畢業後選擇離開另覓出路，由於許多家族成員投身房地產行業，經過一番勸說與考量，決心踏入這個陌生的行業，從零開始</p>
+                    <p>「從應付家長、小朋友到接待看屋客戶，同樣是面對人群，感受卻天差地遠。」楊芳綾說，比起幼稚園工作，房地產職場型態相對嚴肅，畢竟牽涉到幾百萬甚至上千萬的金額，或許解說方面可以輕鬆幽默，但心態上總是戰戰兢兢，特別對她這個入行不久的新人，如何讓藉由客戶的肯定來建立信心，在這個階段是最重要的一環。</p>
+                    <p>第一次帶客看屋讓她印象深刻，使出渾身功夫將個案仔仔細細地介紹了一遍，但自認銷售話術沒有其他前輩老練，不過反倒贏得客戶的肯定和稱讚，可惜最終並沒有成交，「這個經驗讓我知道自己還有很多不足之處，出了社會沒有人會等妳，唯有多問、多學才能跟上團隊的腳步。」</p>
+                    <p>然而，正值青春年華的楊芳綾，如何調整心態去面對房地產工時長的特性？她笑稱，房地產休假時間和一般上班族不同，沒有周休二日，國定假日也都要上班，朋友真的越來越少，所幸職場前輩像是一家人對工時長的缺點就沒那麼在意，現在只希望能成功賣出第一間房子，好讓自己的房地產生涯進入另一個里程碑。</p>
+                </div>
+            </div>
+
+            <div class="bg"><img src="images/people/b1.png"></div>
+        </article>
+    </div>
+
+   <footer>
+        <div>
+            <section>
+                <a href="news.html"><img src="images/news.png"></a>
+                <a href="case.html"><img src="images/case.png"></a>
+                <a href="deco.html"><img src="images/deco.png"></a>
+                <a href="people.html"><img src="images/people.png"></a>
+                <a href="about.html"><img src="images/about.png"></a>
+            </section>
+        </div>
+        <section><img src="images/footer.png"></section>
+    </footer>
+</div>
+</body>
+</html>

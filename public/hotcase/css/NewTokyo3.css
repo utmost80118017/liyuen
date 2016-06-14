@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+#main{
+	background: url(../images/NT3/main.jpg) left 30%;
+	background-size: cover;
+	height: 250px;
+}
+#subMenu3{
+	padding: 24px 0;
+	text-align: center;
+}
+#subMenu3 li{
+	display: inline-block;
+	margin-top: 5px;
+	border: 1px solid #999;
+	padding: 0 8px;
+	cursor: pointer;
+}
+#subMenu3 li:hover{
+	background-color: rgb(240,180,0);
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+.block{
+	position: relative;
+	overflow: hidden;
+	background-color: #444;
+}
+.block.Right > *{
+	float: right;
+}
+.block > *{
+	float: left;
+}
+.block > img{
+	width: 65%;
+}
+
+.collapseMB{
+	display: none;
+}
+.text{
+	position: relative;
+	width: 35%;
+}
+.block:nth-child(odd) .text{
+	background-color: rgb(27,27,27);
+}
+.block:nth-child(even) .text{
+	background-color: rgb(12,41,39);
+}
+#firstText{
+	background-color: rgb(49,49,49);
+}
+
+.wood{
+	background: url(../images/NT3/wood.jpg);
+	background-size: cover;
+	width: 15%;
+}
+.text *{
+	margin: 15px 0;
+}
+.VerticalCenter{
+	position: absolute;
+
+	margin: 0;
+	width: 90%;
+	padding: 0 5%;
+}
+.VerticalCenter > *{
+	letter-spacing: 1px;
+	line-height: 21px;
+}
+
+.text h3{
+	color: rgb(211,173,101);
+}
+.text p{
+	width: 100%;
+	line-height: 28px;
+	letter-spacing: 1px;
+	text-align: justify;
+	color: #FFF;
+}
+#b1{
+	background: url(../images/NT3/1.jpg) no-repeat;
+	background-size: 100% 100%;
+	width: 70%;
+}
+#b2{
+	background: url(../images/NT3/2.jpg) no-repeat;
+	background-size: 100% 100%;
+	width: 70%;
+}
+#b3{
+	background: url(../images/NT3/3.jpg) no-repeat;
+	background-size: 100% 100%;
+	width: 70%;
+}
+#b4{
+	background: url(../images/NT3/4.jpg) no-repeat;
+	background-size: 100% 100%;
+	width: 70%;
+}
+#b5{
+	background: url(../images/NT3/5.jpg) no-repeat;
+	background-size: 100% 100%;
+	width: 70%;
+}
+
+@media (max-width: 768px){
+
+.wood{
+	display: none;
+}
+.block > div , .block > img{
+	width: 100%;
+}
+
+.collapseMB{
+	display: block;
+	text-align: center;
+	cursor: pointer;
+}
+.VerticalCenter{
+	display: none;
+	position: static;
+	-webkit-transform: translateY(0); 
+    transform: translateY(0);
+}
+.VerticalCenter.close{
+	display: block;
+}
+
+}

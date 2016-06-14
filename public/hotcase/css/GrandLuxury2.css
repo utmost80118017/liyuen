@@ -1,0 +1,206 @@
+@charset "utf-8";
+
+.flexslider{
+	margin: 0;
+	border: none;
+}
+
+#main{
+	background: url(../images/GL2/main.jpg) center bottom no-repeat;
+	background-size: cover;
+	height: 300px;	
+}
+#subMenu2{
+	height: 22px;
+	padding: 24px 0;
+	text-align: center;
+}
+#subMenu2 li{
+	display: inline-block;
+	margin-top: 5px;
+	border: 1px solid #999;
+	padding: 0 8px;
+	cursor: pointer;
+}
+#subMenu2 li:hover{
+	background-color: rgb(240,180,0);
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+.collapseMB , .flex-control-nav{
+	display: none;
+}
+
+#DayView{
+	position: relative;
+	background: url(../images/GL2/DayView.jpg) right 90%;
+	background-size: cover;
+	height: 750px;
+}
+#NightView{
+	position: relative;
+	background: url(../images/GL2/NightView.jpg) 20%;
+	background-size: cover;
+	height: 750px;
+}
+#Left , #Right{
+	width: 34%; height: 750px;
+	padding: 0 3%;
+	color: #FFF;
+}
+#Left *, #Right * , #area1 * , #area2 *{
+	margin: 25px 0;
+	line-height: 28px;
+	letter-spacing: 1px;
+}
+#Left p, #Right p , #area1 p , #area2 p{
+	text-align: justify;
+}
+#Left{
+	position: absolute;
+	top: 370px; left: 0;
+	background-color: rgba(0,0,0,0.7);
+}
+#Right{
+	position: absolute;
+	top: 1120px; right: 0;
+	background-color: rgba(0,0,0,0.4);
+}
+
+#Left span:nth-child(1) , #Right span:nth-child(1) , #area1 span:nth-child(1) , #area2 span:nth-child(1){
+	display: inline-block;
+	font-size: 40px;
+	margin-top: 60px;
+}
+#Left span:nth-child(2) , #Right span:nth-child(2) , #area1 span:nth-child(2) , #area2 span:nth-child(2){
+	font-size: 18px;
+}
+#Left h3 , #Right h3{
+	color: rgb(211,173,101);
+}
+
+.mainP{
+	font-size: 0;
+}
+.mainP img{
+	width: 100%;
+}
+#area1{
+	position: relative; z-index: 0;
+	background: url(../images/GL2/area1.jpg) left no-repeat;
+	background-size: cover;
+	padding: 0 15%;
+	overflow: hidden;
+}
+#area2{
+	position: relative; z-index: 0;
+	background: url(../images/GL2/area2.jpg) right no-repeat;
+	background-size: cover;
+	padding: 0 15%;
+	overflow: hidden;
+}
+#area1 > img{
+	position: absolute;
+	right: 0; bottom: 0;
+	margin: 0;
+	width: 15%;
+}
+#area2 > img{
+	position: absolute;
+	left: 0; bottom: 0;
+	margin: 0;
+	width: 15%;
+}
+#area1 span , #area2 span , #area2 p{
+	color: #FFF;
+	position: relative;
+	z-index: 2;
+}
+#area1 h3{
+	/*color: rgb(84,69,42);*/
+	color: rgb(211,173,101);
+	text-shadow: 1px 1px 2px #888;
+}
+#area2 h3{
+	color: rgb(211,173,101);
+}
+
+@media (min-width: 1200px){
+#DayView{
+	background: url(../images/GL2/DayView.jpg) right 90%;
+	background-size: cover;
+	height: 950px;
+}
+#Left{
+	height: 950px;
+}
+#Right{
+	top: 1320px;
+}
+}
+@media (max-width: 768px){
+
+/* collapseMB */
+.collapseMB{
+	display: block; overflow: auto;
+	background-color: rgba(0,0,0,0.9);
+	text-align: center;
+	color: #FFF;
+}
+#public .collapseMB{
+	background-color: #BBB;
+	color: #000;
+}
+.collapseMB *{
+	margin: 10px 0;
+}
+.collapseMB img:first-child{
+	cursor: pointer;
+}
+.collapseMB p{
+	margin: 10px auto;
+	border: 1px solid;
+	width: 120px;
+    padding: 5px 10px;
+    text-align: center;
+    cursor: pointer;
+}
+#Left.close , #Right.close , #area1.close , #area2.close{
+	display: block;
+}
+/* Original */
+#DayView , #NightView{
+	height: 600px;
+}
+#Left , #Right{
+	display: none;
+	position: relative;
+	top: 0;
+	background-color: rgba(0,0,0,.9);
+	width: 90%; height: inherit;
+	padding: 0 5% 5%;
+}
+#area1{
+	display: none;
+	background: url(../images/GL2/area1.jpg) right no-repeat;
+	background-size: cover;
+	padding: 0 10%;
+}
+#area2{
+	display: none;
+	background: url(../images/GL2/area2.jpg) left no-repeat;
+	background-size: cover;
+	padding: 0 10%;
+}
+#area1 img, #area2 img{
+	display: none;
+}
+
+}
+@media (max-width: 480px){
+
+#subMenu2{
+	height: inherit;
+}
+
+}

@@ -1,0 +1,247 @@
+@charset "utf-8";
+
+#main{
+	background: url(../images/NT1/main.jpg) center center;
+	background-size: cover;
+	height: 250px;
+}
+#subMenu{
+	height: 22px;
+	padding: 24px 0;
+	text-align: center;
+}
+#subMenu li{
+	display: inline-block;
+	border: 1px solid #999;
+	padding: 0 8px;
+	cursor: pointer;
+}
+#subMenu li:hover{
+	background-color: rgb(240,180,0);
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+/* Golden Area */
+#golden1 .g1{
+	font-size: 0;
+}
+#golden1 .g1 img{
+	width: 100%;
+}
+
+.down{
+	position: relative;
+	background-color: #444;
+	padding: 30px 0;
+}
+.down img{
+	position: absolute;
+	bottom: 0;
+}
+.down h3{
+	margin: 10px 0;
+	padding: 0 5%;
+	color: rgb(124,175,4)
+}
+.down p{	
+	padding: 10px 5%;
+
+	font-size: 16px;
+	color: #FFF;
+}
+
+#airTitle{
+	font-size: 0;
+}
+#airTitle img{
+	width: 100%;
+}
+#airTitle #mark{
+	position: absolute;
+	left: 0;
+
+	 -webkit-animation: flash 3s infinite; /* Chrome, Safari, Opera */ 
+    animation: flash 3s infinite;
+}
+
+@-webkit-keyframes flash {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+} 
+
+/* Standard syntax */ 
+@keyframes flash {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+#air .numberW , #air .numberB{
+	float: left;
+	width: 50%;
+	padding: 3% 0;
+}
+#air .numberW{
+	background-color: #FFF;
+}
+#air .numberB{
+	background-color: #000;
+	color: #FFF;
+}
+#air .numberW ul , #air .numberB ul{
+	float: left;
+	list-style-type: none;
+	width: 40%;
+	padding-left: 10%;
+	font-weight: bold;
+
+}
+#air ul li{
+	margin: 10px 0;
+}
+#air ul img{
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+#golden3{
+	background-color: rgb(27,27,27);
+}
+#g3Title{
+	position: relative;
+	background: url(../images/NT1/g3.jpg) center bottom;
+	background-size: cover;
+	overflow: hidden;
+}
+.wave{
+	overflow-y: hidden;
+}
+.text{
+	margin: 3% auto;
+	max-width: 700px;
+	color: #FFF;
+}
+#g3Title .wave , #g4Title .wave{
+	position: absolute;
+	bottom: 0; left: 0;
+}
+.text > *{
+	margin: 10px 0;
+}
+#g3Title .text > *{
+	margin: 10px auto;
+	width: 220px;
+}
+.text div{
+	display: block;
+}
+.text div *{
+	float: left;
+}
+.text h3{
+	color: rgb(124,175,4);
+}
+.pic{
+	font-size: 0;
+}
+.pic .L25{
+	float: left;
+	width: 25%;
+}
+.pic .L50{
+	float: left;
+	width: 50%;
+}
+#g4Title{
+	position: relative;
+	background-color: rgb(27,27,27);
+	overflow: hidden;
+}
+#golden4 .pic{
+	background-color: #333;
+}
+.pic .L75{
+	float: left;
+	width: 75%;
+}
+.pic .L66{
+	float: right;
+	width: calc(200%/3);
+}
+.pic .L33{
+	float: right;
+	width: calc(100%/3);	
+}
+
+.cycle , .cycle2{
+	position: relative;	
+}
+.cycle img , .cycle2 img{
+	position: absolute;
+	width: 100%;
+}
+
+@media (max-width: 980px){
+
+.text{
+	max-width: 460px;
+	padding: 0 20px;
+}
+.pic .L25{
+	width: 50%;
+}
+.pic .L50 {
+	width: 100%;
+}
+.pic .L75{
+	width: 100%;
+}
+#golden4 .L25{
+	display: none;
+}
+
+}
+
+@media (max-width: 768px){
+
+.collapseMB{
+	background-color: #CCC;
+}
+#air .numberW , #air .numberB{
+	width: 100%;
+}
+#g3Title , #g4Title{
+	display: none;
+}
+#g3Title > .wave , #g4Title > .wave , .down , #golden1 .down > img{
+	display: none;
+}
+#g3Title.close , #g4Title.close , .down.close{
+	display: block;
+}
+
+.pic .L66{
+	float: right;
+	width: 150%;
+}
+.pic .L33{
+	float: right;
+	width: 100%;
+}
+
+}
+
+@media (max-width: 480px){
+
+#air .numberW ul , #air .numberB ul{
+	float: none;
+	margin: 0 auto;
+	width: 150px;
+	padding: 0;
+}
+.pic .L25{
+	width: 100%;
+}
+
+}

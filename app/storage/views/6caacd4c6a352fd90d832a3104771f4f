@@ -1,0 +1,46 @@
+/*<style type="text/css">
+  html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+  .WtfMap {
+    width: 50%;
+    height:40%;
+  }
+</style>*/
+
+<script src="/js/jquery.js"></script>
+<script src="/js/jquery.tinyMap.js"></script>
+<script>
+function loadMap(){
+  var map 	=  $('.googlemap');
+
+  map.tinyMap({
+    'center': ['<?php echo $case->latitude; ?>','<?php echo $case->longitude; ?>'],
+    'zoom': 13,
+    'marker': [
+          {
+            'addr'          :
+
+                [ '<?php echo $case->latitude; ?>' , '<?php echo $case->longitude; ?>' ]
+            ,
+
+            'icon'          : createMarkerIcon('<?php echo $case->title; ?>'),
+            'newLabelCSS'   : 'labels',
+            'ignore'        : true,
+            'text'          :   '<a href=/showCase/<?php echo $case->id; ?> >'+
+                                "地址：<?php echo $case->address; ?><br>"+
+                                "總價：<?php echo $case->total_price; ?><br>"+
+                                '</a>'
+          },
+    ] ,
+});
+}
+
+$("document").ready(function(){
+        loadMap();
+});
+
+
+
+</script>
+
+
+<script src="/js/cases.js"></script>

@@ -1,0 +1,283 @@
+@charset "utf-8";
+
+#main{	
+	background: url(../images/GrandLuxury/main.jpg) center no-repeat;
+	background-size: cover;
+	height: 100vh;	
+}
+.menu-icon{
+	background-color: inherit;
+	padding: 20px 30px;
+}
+.block{
+	display: block;
+	color: #FFF;
+}
+#city , #city2 , #classic4 , #classic5{
+	float: right;
+	height: 300px;
+}
+#city4 , #city5 , #classic , #classic2{
+	float: left;
+	height: 300px;
+}
+
+#city4 , #classic{
+	position: relative;
+}
+.center{
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 80%;
+}
+
+/* CITY */
+#city{
+	background: url(../images/GrandLuxury/X.jpg) center center;
+	background-size: cover;
+	width: 50%;
+}
+#city2{
+	background-color: rgb(156,109,18);
+	width: 100%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+#city3{
+	float: left;
+	background: url(../images/GrandLuxury/3.jpg) center center;
+	background-size: cover;
+	width: 25%; height: 600px;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+#city4{
+	background: url(../images/GrandLuxury/4.jpg) center center;
+	background-size: cover;
+	width: 40%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+#city5{
+	background: url(../images/GrandLuxury/5.jpg) center center;
+	background-size: cover;
+	width: 25%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+/* CLASSIC */
+#classic{
+	background: url(../images/GrandLuxury/6.jpg) center center;
+	background-size: cover;
+	width: 40%;
+}
+#classic2{
+	background: url(../images/GrandLuxury/7.jpg) center center;
+	background-size: cover;
+	width: 100%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+#classic3{
+	float: right;
+	background: url(../images/GrandLuxury/8.jpg) center center;
+	background-size: cover;
+	width: 100%; height: 600px;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+#classic4{
+	background: url(../images/GrandLuxury/9.jpg) center center;
+	background-size: cover;
+	width: 100%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+#classic5{
+	background-color: rgb(73,73,73);
+	width: 100%;
+}
+#city2 , #classic5{
+	position: relative;
+}
+#city2 p, #classic5 p{
+	position: absolute;
+	top: 50%; left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+/* CSS 3 Effect*/
+.over2 , .over7 , .over8 , .over9 , .over10{
+	overflow: hidden;
+	position: relative;
+	width: 25%;
+}
+.over8{
+	float: right;
+}
+.over9{
+	float: right;
+	width: 50%;
+}
+#city3:hover{
+	background: url(../images/GrandLuxury/3-2.jpg);
+	background-size: cover;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+#city5:hover{
+	background: url(../images/GrandLuxury/5-2.jpg);
+	background-size: cover;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+#city2:hover , #classic5:hover , #classic2:hover , #classic3:hover , #classic4:hover{
+	-webkit-transform: scale(1.1,1.1);
+	-webkit-transition: 0.5s;
+
+	transform: scale(1.1,1.1);
+	transition: 0.5s;
+}
+
+.title a:hover{
+	border: 2px solid rgb(156,109,18);
+	color: rgb(156,109,18);
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+/* /CSS 3 Effect */
+
+#bottom{
+	display: block; overflow: hidden;
+	position: relative;
+	width: 80%;
+	padding: 10%;
+	text-align: center;
+}
+#bottom > img{
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%; height: 100%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+#bottom > img:hover{
+	top: -5%; left: -5%;
+	width: 110%; height: 110%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+#DC{
+	position: relative; 
+	background-color: rgba(0,0,0,0.7);
+	margin: 10% auto;
+	max-width: 400px;
+	color: #FFF;
+}
+#DC .center{
+	width: 90%;
+	max-width: 400px;
+}
+.title{
+	min-height: 300px;
+	padding: 0 5%;
+	text-align: center;
+}
+.title p{
+	display: block;
+	padding: 3% 0;
+}
+.title a{
+	display: block;
+	margin: 2% auto;
+	border: 2px solid #666;
+	width: 50px;
+	padding: 5px 30px;
+
+	color: #FFF;
+	font-weight: bold;
+}
+.title h6{
+	margin: 0 auto;
+	max-width: 600px;
+	color: rgb(111,111,111);
+	font-size: 10px;
+	text-align: justify;
+}
+
+@media (min-width: 1200px){
+
+.block div , #city , #city2 , #city4 , #city5 , #classic , #classic2 , #classic4 , #classic5{
+	height: 500px;
+}
+#city3 , div.over8 , #classic3{
+	height: 1000px;
+}
+#city4 p , #classic p{
+	margin-top: 100px;
+}
+
+}
+@media (max-width: 768px){
+
+.block{
+	height: initial;
+}
+#city4 , #classic{
+	width: calc(200%/3 - 10%);
+}
+.over2 , #city , .over7 , .over9{
+	width: calc(200%/3);
+}
+#city3 , #city5 , .over8 , .over10{
+	width: calc(100%/3);
+}
+#city4 .center , .center{
+	width: 85%;
+}
+#DC .center{
+	width: 88%;
+}
+
+.title{
+	max-width: 90%;
+}
+.title p{
+	padding: 4% 0;
+}
+.title a{
+	margin: 3% auto;
+}
+
+}
+
+@media (max-width: 480px){
+
+.block > div , #city , #classic , #city4 , #city5{
+	width: 100%;
+}
+#city3 , .over8{
+	display: none;
+}
+#city4 .center , .center{
+	width: 90%;
+}
+
+#bottom > img{
+	left: -25%;
+	width: 150%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+#bottom > img:hover{
+	left: -30%;
+	width: 160%;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+}

@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+#container{
+	overflow: auto;
+	position: relative;
+	background: url(../img/about/bg2.png) left bottom no-repeat , url(../img/about/bg3.png) right bottom no-repeat , url(../img/about/bg.jpg) right no-repeat;
+	background-size: 637px , 407px , cover;
+	min-height: 100vh;
+}
+
+#subMenu{
+	position: absolute;
+	left: 150px;
+}
+#subMenu li{
+	list-style-type: none;	
+	background-color: #fcfbf9;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	padding: 2px 10px;
+
+	font-size: 18px;
+	text-align: center;
+	box-shadow: 2px 2px 5px #CCC;
+}
+#subMenu li:hover , #subMenu .thisPage{
+	background-color: #ef9173;	
+}
+#subMenu li:hover a , #subMenu .thisPage a{
+	color: #FFF;
+}
+
+#newsList{
+	position: relative;
+	background-color: rgba(255,255,255,0.6);
+	margin: 150px auto;
+	width: 800px;
+	padding: 50px 100px 0;
+}
+#newsList .bg{
+	position: absolute;
+	top: -40px; left: -40px;
+}
+
+.news .title{
+	width: 100%;
+	border-bottom: 2px solid #999;
+	text-align: center;
+}
+.news .title img{
+	display: block;
+	margin: 0 auto;
+}
+.news .title span{
+	display: inline-block;
+	background-color: #638c0b;
+	margin: 30px 0;
+	padding: 5px 20px;
+	color: #FFF;
+	font-size: 18px;
+}
+
+#newsList .content{
+	padding: 30px 5%;
+}
+#newsList .content p{
+	font-size: 18px;
+	text-align: justify;
+	text-justify: distribute;
+	line-height: 28px;
+	letter-spacing: 1px;
+}
+#newsList .content .EN{
+	margin: 20px 0;
+	color: rgba(0,0,0,0.4);
+	font-size: 10px;
+	text-align: center;
+	line-height: inherit;
+	letter-spacing: inherit;
+}
+#newsList .EN span{
+	display: block;
+}
+
+
+@media (max-width: 1200px){
+
+#container{
+	background: url(../img/about/bg2.png) left bottom no-repeat , url(../img/about/bg.jpg) right no-repeat;
+	background-size: 637px , cover;
+}
+
+}
+@media (max-width: 980px){
+
+#subMenu{
+	display: none;
+}
+#newsList{
+	width: 90%;
+	padding: 5% 5% 0;
+}
+
+}
+@media (max-width: 768px){
+
+#container{
+	background: url(../img/about/bg2.png) left -100px bottom no-repeat , url(../img/about/bg.jpg) right no-repeat;
+	background-size: 637px , cover;
+}
+
+}

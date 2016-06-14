@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+#main{
+	background: url(../images/NT4/main.jpg) center center;
+	background-size: cover;
+	height: 250px;
+}
+#subMenu4{
+	height: 22px;
+	padding: 24px 0;
+	text-align: center;
+}
+#subMenu4 li{
+	display: inline-block;
+	border: 1px solid #999;
+	padding: 0 8px;
+	cursor: pointer;
+}
+#subMenu4 li:hover{
+	background-color: rgb(240,180,0);
+	transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+
+.content{
+	font-size: 0;
+}
+.content > img , .L35 img , .L65 > img{
+	width: 100%;
+}
+
+.content > div{
+	float: left;
+	position: relative;
+	font-size: 0;
+}
+#build1{
+	position: absolute; z-index: -1;
+	right: 0;
+	width: calc(100% / 3.5);
+}
+#build2{
+	position: absolute; z-index: -1;
+	width: calc(100% / 3.5);
+}
+.L35{
+	width: 35%;
+}
+
+.L65{
+	width: 65%;
+}
+.L65 p{
+	font-size: 10px;
+	position: absolute;
+	top: 25%; 
+
+	width: 80%;
+	padding: 0 10%;
+	text-align: justify;
+	color: #999;
+}
+.L65 p img{
+	display: block;
+	margin-bottom: 5px;
+}
+.L25{
+	width: 25%;
+}
+.L25 img{
+	width: calc( 700% / 5 );
+}
+div.R10{
+	float: right;
+	position: relative;
+	width: 10%;
+}
+.R10 img{
+	position: absolute;
+	width: 100%;
+}
+
+@media (max-width: 768px){
+
+.L35 , .L65{
+	width: 100%;
+}
+.L25{
+	width: calc( 500% /7 );
+	overflow-x: hidden; 
+}
+div.R10{
+	width: calc( 200% /7 );
+}
+
+}
+
+@media (max-width: 480px){
+
+.L65{
+	height: 200px;
+}
+.L65 img{
+	width: auto; height: 100%;
+}
+.L65 p{
+	top: 0;
+	padding: 20px 10%;
+}
+
+}

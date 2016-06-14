@@ -1,0 +1,48 @@
+<?php
+  echo $width;
+?>
+
+
+
+  
+
+
+
+    <?php $__env->startSection('sidebar'); ?>
+    @parent
+
+    <p><?php echo $post->name; ?></p>
+
+
+    <?php
+      $html = new \Htmldom($post->content);
+      // Find all images
+      // foreach($html->find('p') as $element){
+      //        echo strip_tags($element) . '';
+      //        echo "<br>";
+      //        echo mb_strlen( strip_tags($element), "utf-8");
+      //        echo "<br>";
+      //        echo "<br>";
+      // }
+      // echo $html->find('img')[0]->style;
+
+
+      foreach($html->find('img') as $element){
+          // echo $element->src;
+            //  echo strip_tags($element) . '';
+            //  echo "<br>";
+            //  echo mb_strlen( strip_tags($element), "utf-8");
+            //  echo "<br>";
+            //  echo "<br>";
+      }
+
+    ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('content'); ?>
+    <?php echo $post->content; ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make("layout.f1", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

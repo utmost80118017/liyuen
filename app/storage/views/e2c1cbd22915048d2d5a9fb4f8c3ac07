@@ -1,0 +1,13 @@
+<!-- Stored in app/views/layouts/master.blade.php -->
+
+<html>
+    <body>
+        <?php $__env->startSection('sidebar'); ?>
+        lay_f1_
+        <?php echo $__env->yieldSection(); ?>
+        <hr>
+        <div class="container"  >
+            <?php echo $__env->yieldContent('content'); ?>
+        </div>
+    </body>
+</html>

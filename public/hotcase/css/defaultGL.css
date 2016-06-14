@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+*{ margin: 0; padding: 0; font-family: Microsoft JhengHei, arial; }
+a{ text-decoration: none; }
+.clearfix:after {  
+  content: ".";   
+  display: block;   
+  height: 0;   
+  clear: both;   
+  visibility: hidden;  
+}  
+
+body{
+	overflow-x: hidden;
+}
+nav{
+	position: fixed; z-index: 2;
+	width: 100%;
+}
+.HomeLogo{
+	position: fixed; z-index: 2;	
+	width: 100%;
+	padding: 20px 30px;
+	background-color: #444;
+}
+.HomeLogo img{
+	height: 45px;
+}
+.menu-icon {
+	position: absolute; z-index: 2;
+	right: 0;
+	background-color: rgba(0,0,0,0.4);
+	padding: 2%;
+}
+.menu-icon a{
+	outline: 0;
+}
+.collapse{
+	opacity: 0; display: none;
+	position: fixed;
+
+	background-color: rgba(0,0,0,0.9);
+	width: 100%; height: 100vh;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+.in{
+	opacity: 1; display: block; 
+	z-index: 3;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+#menu-mb .close{
+	position: absolute;
+	right: 0;
+	padding: 2%;
+	background: rgba(0,0,0,1);
+}
+#menu-mb{
+	text-align: center;
+}
+#menu-mb ul{
+	margin-top: 15%;
+}
+#menu-mb li{
+	list-style-type: none;
+	margin: 20px auto;
+	width: 120px;
+}
+
+#menu-mb ul a{
+	font-size: 18px;
+	color: #FFF;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+#menu-mb ul a p{
+	font-size: 10px;
+	font-weight: bold;
+	color: #777;
+}
+#menu-mb ul a:hover , #menu-mb ul a:hover p{
+	color: rgb(156,109,18);
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+
+#menu-mb hr{
+	width: 120px;
+	margin: 5% auto;
+	color: #AAA;
+}
+#menu-mb p{
+	color: #FFF;
+	line-height: 24px
+}
+#menu-mb img{
+	margin-top: 3%;
+}
+
+#main{
+	text-align: center;
+}
+#main img{
+	margin-top: 79px;
+}
+#toTop{
+	display: none;
+	position: fixed; z-index: 2;
+	bottom: 0; right: 0;
+	background: url(../images/GrandLuxury/toTop.jpg) center no-repeat;
+	background-size: contain;
+
+	margin: 3%;
+	width: 49px; height: 34px;
+
+	font-size: 40px;
+	font-weight: bold;
+	color: #FFF;
+	cursor: pointer;
+}
+
+
+footer{
+	background-color: #333;
+	padding: 2%;
+	text-align: center;
+}
+footer p{
+	margin: 1% 0;
+	color: #FFF;
+	line-height: 30px;
+}
+footer h4{
+	margin-top: 3%;
+	color: #AAA;
+}
+
+@media (max-width: 768px){
+
+#zoom{
+	position: fixed; z-index: 2;
+	bottom: calc(5% + 34px); right: calc(3% + 7px);
+	background: url(../images/NewTokyo/zoom.png) center no-repeat, rgb(23,83,78);
+	background-size: contain;
+
+	border-radius: 23px;
+	width: 34px; height: 34px;
+}
+
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>米築</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/news.css">
+    <link rel="stylesheet" type="text/css" href="css/people.css">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/Crawler.js"></script>
+    <script src="js/script.js"></script>
+    
+    <script type="text/javascript">
+        $(window).load(function(){
+            $("#main section > div span:eq(0)").click(function(){
+                $("html , body").animate({
+                    "scrollTop": $(".people:eq(0)").offset().top -30
+                })
+            });
+            $("#main section > div span:eq(1)").click(function(){
+                $("html , body").animate({
+                    "scrollTop": $(".people:eq(1)").offset().top -30
+                })
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="container">
+	<nav>
+        <section class="clearfix">
+            <div id="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+            <div id="slogan">
+                <img src="images/slogan.png">
+
+                
+                <div>
+                    <input type="text" placeholder="SEARCH" />
+                    <img src="images/search_icon.png">
+                </div>
+            </div>
+        </section>
+        <div>
+            <ul>
+                <li><a href="news.html"><p>NEWS</p><span>地產動態</span></a></li>
+                <li><a href="case.html"><p>CASE</p><span>新案訊息</span></a></li>
+                <li><a href="deco.html"><p>DECO</p><span>生活美學</span></a></li>
+                <li><a href="people.html"><p>PEOPLE</p><span>人物觀點</span></a></li>
+                <li><a href="about.html"><p>ABOUT</p><span>關於米築</span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="top"><img src="images/news/main.jpg"></div>
+    <img id="toTop" src="images/toTop.png">
+
+    <div class="row-marquee">
+        <img src="images/row.png">
+        <div class="marquee" id="m"><img src="images/m1.jpg"></div>
+        <img src="images/row.png">
+    </div>
+
+    <div id="main" class="clearfix">
+        <section>
+            <p>PEOPLE</p>
+            <span>人物觀點</span>
+
+            <div><span>鍾堯明</span><span>楊芳綾</span></div>
+        </section>
+
+        <aside>
+            <div class="ad">
+                <img src="images/news/ad1.jpg">
+                <p>彩虹牌油漆</p>
+                <span>填滿家庭色彩的好幫手 加購價＄1280</span>
+            </div>
+
+            <div class="ad">
+                <img src="images/news/ad2.jpg">
+                <p>宜得利傢劇</p>
+                <span>北歐風格帶來和諧家庭溫暖，視覺與聽覺的雙重饗宴。</span>
+            </div>
+
+            <div class="ad">
+                <img src="images/news/ad3.jpg">
+                <p>彩虹牌油漆</p>
+                <span>填滿家庭色彩的好幫手 加購價＄1280</span>
+            </div>
+
+            <div class="ad">
+                <img src="images/news/ad1.jpg">
+                <p>彩虹牌油漆</p>
+                <span>填滿家庭色彩的好幫手 加購價＄1280</span>
+            </div>
+
+            <div class="ad">
+                <img src="images/news/ad2.jpg">
+                <p>宜得利傢劇</p>
+                <span>北歐風格帶來和諧家庭溫暖，視覺與聽覺的雙重饗宴。</span>
+            </div>
+
+            <div class="ad">
+                <img src="images/news/ad3.jpg">
+                <p>彩虹牌油漆</p>
+                <span>填滿家庭色彩的好幫手 加購價＄1280</span>
+            </div>
+        </aside>
+
+        <article>
+            <div class="people">
+                <img src="images/people/1.jpg">
+                <div class="name"><p>- 名家專欄 -</p><span>鍾堯明</span></div>
+                <p>臺博館群各建築是本次「解構：李乾朗手繪臺博建築特展」的主角，在李教授的手繪中它同時來表達創作者對這些歷史建築的歷史性、空間性和文化性的表達和詮釋展覽中的建築畫，強調了「臺博館本館」和「鐵道部」的建築細節的美學藝術和高水準的建築工藝南門的「小白宮」則利用了清代........</p>                
+            </div>
+            <div class="link">
+                <a href="people2.html"><span>MORE</span></a>
+                <img src="images/people/b1.png">
+            </div>
+
+            <div class="people">
+                <img src="images/people/2.jpg">
+                <div class="name"><p>- 地產美女 -</p><span>楊芳綾</span></div>
+                <p>臺博館群各建築是本次「解構：李乾朗手繪臺博建築特展」的主角，在李教授的手繪中它同時來表達創作者對這些歷史建築的歷史性、空間性和文化性的表達和詮釋展覽中的建築畫，強調了「臺博館本館」和「鐵道部」的建築細節的美學藝術和高水準的建築工藝南門的「小白宮」則利用了清代........</p>                
+            </div>
+            <div class="link">
+                <a href="people2.html"><span>MORE</span></a>
+                <img src="images/people/b2.png">
+            </div>
+
+            <p id="page"><a href="">1</a><a href="">2</a><a href="">3</a></p>
+        </article>
+    </div>
+
+    <footer>
+        <div>
+            <section>
+                <a href="news.html"><img src="images/news.png"></a>
+                <a href="case.html"><img src="images/case.png"></a>
+                <a href="deco.html"><img src="images/deco.png"></a>
+                <a href="people.html"><img src="images/people.png"></a>
+                <a href="about.html"><img src="images/about.png"></a>
+            </section>
+        </div>
+        <section><img src="images/footer.png"></section>
+    </footer>
+</div>
+</body>
+</html>

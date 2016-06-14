@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html prefix='og: http://ogp.me/ns#'>
+<head>
+	<meta charset="UTF-8">
+	<title>米築</title>
+	<link rel="shortcut icon" href="/favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="<?php echo $case->title; ?>"></meta>
+	<meta property="og:type" content="房屋"></meta>
+	<meta property="og:url" content="<?php echo Request::url(); ?>"></meta>
+	<meta property="og:site_name" content="米築"></meta>
+	<meta property="og:description" content="<?php echo ms_str($case->content,200); ?>"></meta>
+	<?php
+		$o_img = getRateImageType($case->id,'setGoogle');
+	?>
+	<?php if(  !empty($o_img->image) AND File::exists( public_path().$o_img->image)  ): ?>
+		<meta property="og:image" src="/public<?php echo $o_img->image; ?>"></meta>
+	<?php endif; ?>
+
+
+
+
+    <link rel="stylesheet" type="text/css" href="/css/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="/css/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="/css/default.css">
+    <link rel="stylesheet" type="text/css" href="/css/case.css">
+    <link rel="stylesheet" type="text/css" href="/css/case2.css">
+
+    <script src="/js/jquery.js"></script>
+		<script src="/js/jquery.flexslider-min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/Crawler.js"></script>
+		<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+    <script src="/js/script.js"></script>
+
+		<script src="/js/jquery.tinyMap.js"></script>
+
+
+		<script type="text/javascript">
+				$(window).load(function() {
+						$('.fs1').flexslider({
+								animation: "slide",
+								slideshowSpeed: 3500,
+						});
+				});
+
+		function loadMap(){
+		  var map 	=  $('.wmap');
+
+		  map.tinyMap({
+		    'center':  ['<?php echo $case->latitude; ?>','<?php echo $case->longitude; ?>'],
+		    'zoom': 13,
+				'infoWindowAutoClose':true,
+				'scrollwheel': false,
+		    'marker': [
+		          {
+		            'addr'          :['<?php echo $case->latitude; ?>','<?php echo $case->longitude; ?>'],
+
+		            'icon'          : createMarkerIcon('<?php echo $case->title; ?>'),
+		            'newLabelCSS'   : 'labels',
+		            'ignore'        : true,
+		            'text'          :    '<table><tr><td>'+
+																					<?php
+																						$o_img = getRateImageType($case->id,'setGoogle');
+																					?>
+																					<?php if(  !empty($o_img->image) AND File::exists( public_path().$o_img->image)  ): ?>
+																						'<img src="/public<?php echo $o_img->image; ?>"    >'+
+																					<?php endif; ?>
+																			'</td><td> '+
+
+																					' <?php echo $case->googleTitle; ?><br>'+
+																					' <?php echo $case->googleContent; ?><br>'+
+
+																			'</td></tr></table>'
+
+		          },
+							<?php foreach($cases as $o_case): ?>
+								{
+									'addr'          : ['<?php echo $o_case->latitude; ?>','<?php echo $o_case->longitude; ?>'],
+
+									'icon'          : createMarkerIcon('<?php echo $o_case->title; ?>'),
+									'newLabelCSS'   : 'labels',
+									'ignore'        : true,
+									'text'          : '<table><tr><td>'+
+																				<?php
+																					$r_img = getRateImageType($o_case->id,'setGoogle');
+																				?>
+																				<?php if(  !empty($r_img->image) AND File::exists( public_path().$r_img->image)  ): ?>
+												                	'<img src="/public<?php echo $r_img->image; ?>"    >'+
+																				<?php endif; ?>
+																			 '</td><td>'+
+																					 '<?php echo $o_case->googleTitle; ?> <br>'+
+																					 ' <?php echo $o_case->googleContent; ?> '+
+																			 '<ul></td></tr></table>'
+
+								},
+							<?php endforeach; ?>
+
+		    ] ,
+		});
+		}
+
+		$("document").ready(function(){
+		        loadMap();
+		});
+
+
+
+		</script>
+		<script src="/js/cases.js"></script>
+		<style type="text/css">
+		  #map-canvas { height: 100%; margin: 0; padding: 0;}
+
+
+			.wmap {
+				width: 100%; height: 500px;
+			}
+
+			@media (max-width: 480px) {
+
+
+				.wmap {
+			    height: 250px;
+			  }
+			}
+		</style>
+</head>
+
+<body>
+
+
+
+
+
+<div id="container">
+
+
+	<div class="WtfMap"></div>
+	<?php echo $__env->make("frontend.comm.top", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+     <?php echo $__env->make("frontend.comm.top_ad",array("sql_data"=>$ad_12), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <img id="toTop" src="/images/toTop.png">
+		<?php echo $__env->make("frontend.comm.row-marquee",array("m"=>"m3" , "c_sql"=>$ad_8), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+
+		<div class="mainPic">
+        <div class="flex">
+            <div class="flexslider fs1">
+                <ul class="slides">
+
+										<?php echo $case->title; ?>
+
+										<?php
+							      $rate_pics=DB::table("rate_pics")
+																		->where('rate_id',$case->id)
+																		->whereNotIn('name',array("setGoogle","setList","setShow"))
+																		->take(6)
+																		->get();
+							      ?>
+
+							      <?php foreach($rate_pics as $pic): ?>
+												<?php if( !empty($pic->image) AND File::exists(public_path().$pic->image) ): ?>
+				                    <li>
+				                        <img src="/public<?php echo $pic->image; ?>" />
+				                    </li>
+												<?php endif; ?>
+										<?php endforeach; ?>
+
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div id="main">
+
+        <span id="Name"><?php echo $case->title; ?></span>
+
+        <p id="subTitle">
+					<span><?php echo $case->title; ?></span>
+
+
+
+					<?php if($case->videoLink): ?>
+						<a href="<?php echo $case->videoLink; ?>" target="_new" >
+								<img src="/images/case/icon4.png">
+						</a>
+					<?php endif; ?>
+
+					<?php if($case->vr360Link): ?>
+						<a href="<?php echo $case->vr360Link; ?>"  target="_new" >
+							<img src="/images/case/icon3.png">
+						</a>
+					<?php endif; ?>
+
+					<a href="javascript: void(window.open('http://www.facebook.com/share.php?u='.concat(encodeURIComponent(location.href)) ));"  target="_new" >
+							<img src="/images/case/icon2.png">
+					</a>
+
+					<?php if($case->lineLink): ?>
+						<a href="<?php echo $case->lineLink; ?>"  target="_new" >
+							<img src="/images/case/icon1.png">
+						</a>
+					<?php endif; ?>
+
+				</p>
+        <p id="intro">
+						<span>
+	            <?php
+							// $cc=explode( "<p>" ,$case->content);
+							// // echo count($cc);
+							// $html='';
+							//
+							// foreach($cc as  $a){
+							// 	$html.=$a;
+							// }
+							// echo $html;
+							$html = new \Htmldom($case->content);
+							foreach($html->find('p') as $element)
+							       echo $element->plaintext. '<br>';
+
+							// $html1="";
+							// $cc1 = explode( "</p>" , $html);
+							// foreach($cc1 as  $aa){
+							// 	$html1.=$aa;
+							// }
+							// echo $html;
+
+							// $cc=explode( "<p>" ,$case->content);
+							?>
+						</span>
+        </p>
+
+        <div id="info" class="clearfix">
+            <p>本案資訊</p>
+            <ul>
+                <li>建設：<?php echo $case->investment; ?></li>
+                <li>基地面積：<?php echo $case->baseArea; ?></li>
+                <li>樓層：<?php echo $case->floor; ?></li>
+                <li>戶數：<?php echo $case->households; ?></li>
+                <li>坪數：<?php echo $case->floorNumber; ?></li>
+                <li>格局：<?php echo $case->pattern; ?></li>
+                 
+            </ul>
+            <ul>
+                <li>公設比：<?php echo $case->postulate; ?></li>
+                <li>單價：<?php echo $case->one_price; ?></li>
+                <li>總價：<?php echo $case->total_price; ?></li>
+                <li>基地位置:<?php echo $case->base_address; ?></li>
+                <li>接待中心：<?php echo $case->reception; ?></li>
+                <li>洽詢電話：<?php echo $case->tel; ?></li>
+            </ul>
+            <div>
+							<?php
+								$s_img = getRateImageType($case->id,'setShow');
+							?>
+							<?php if(  !empty($s_img->image) AND File::exists( public_path().$s_img->image)  ): ?>
+								<img src="/public<?php echo $s_img->image; ?>"     >
+							<?php else: ?>
+								<img src="/images/case/c1.jpg">
+							<?php endif; ?>
+
+						</div>
+        </div>
+
+    </div>
+
+
+    <section id="map">
+
+
+			<!-- <?php echo $__env->make("frontend.demo2", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> -->
+			<div class="googlemap">
+				<img src="/images/case/map.jpg">
+				<div class="wmap"></div>
+				<img src="/images/case/map.jpg">
+			</div>
+
+
+        <div class="select">
+            <img class="left" src="/images/index/case_arrowL.png">
+            <img class="right" src="/images/index/case_arrowR.png">
+            <div class="slick3">
+                <div class="area"><a href="/case"><p>全部區域</p><p>ALL</p></a></div>
+
+
+								<?php foreach($areas as $area): ?>
+								<div class="area" id="<?php echo $area->id; ?>">
+										<a href="/case?taiwanArea=<?php echo $area->id; ?>">
+											<p><?php echo $area->name; ?></p>
+											<p><?php echo $area->title; ?></p>
+										</a>
+								</div>
+								<?php endforeach; ?>
+
+
+            </div>
+        </div>
+    </section>
+
+    <aside class="clearfix">
+
+				<?php foreach($cases as $sub_case): ?>
+        <div class="case">
+            <div class="casePic">
+								<a href="/case2/<?php echo $sub_case->id; ?>">
+
+
+
+
+
+
+									<?php
+										$r_img = getRateImageType($sub_case->id,'setList');
+									?>
+									<?php if(  !empty($r_img->image) AND File::exists( public_path().$r_img->image)  ): ?>
+	                	<img src="/public<?php echo $r_img->image; ?>"  >
+									<?php else: ?>
+										<img src="images/case/case1.jpg"  >
+									<?php endif; ?>
+
+
+
+								</a>
+						</div>
+        </div>
+				<?php endforeach; ?>
+
+
+
+        <p id="page">
+
+					<?php if($taiwanArea): ?>
+					<?php echo with(new CustomPresenter($cases->appends(array('taiwanArea' => $taiwanArea)) ))->render(); ?>
+					<?php else: ?>
+					<?php echo with(new CustomPresenter($cases))->render(); ?>
+					<?php endif; ?>
+				</p>
+    </aside>
+
+    <?php echo $__env->make("frontend.comm.footer", array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</div>
+
+
+
+<script type="text/javascript">
+		$("document").ready(function(){
+				$(".area").click(function(){
+					location.href="?taiwanArea="+$(this).attr("id");
+				});
+		});
+</script>
+
+
+
+
+</body>
+</html>
