@@ -21,12 +21,12 @@
 	<nav>
 		<div class="PC clearfix">
 			<ul>
-				<li><a href="/index.html"><img src="/img/m1.png">首頁</a></li>
-				<li><a href="/about.html"><img src="/img/m2.png">關於笠竹園</a></li>
-				<li><a href="/hotnews.html"><img src="/img/m3.png">最新消息</a></li>
-				<li><a href="/menu.html"><img src="/img/m4.png">特色餐點</a></li>
-				<li><a href="/process.html"><img src="/img/m5.png">招牌胡椒鴨</a></li>
-				<li><a href="/contact.html"><img src="/img/m6.png">交通資訊</a></li>
+				<li><a href="index"><img src="/img/m1.png">首頁</a></li>
+				<li><a href="about"><img src="/img/m2.png">關於笠竹園</a></li>
+				<li><a href="hotnews"><img src="/img/m3.png">最新消息</a></li>
+				<li><a href="menu"><img src="/img/m4.png">特色餐點</a></li>
+				<li><a href="process"><img src="/img/m5.png">招牌胡椒鴨</a></li>
+				<li><a href="contact"><img src="/img/m6.png">交通資訊</a></li>
 			</ul>
 
 			<a href=""><img class="fb" src="/img/fb2.png"></a>
@@ -38,30 +38,30 @@
 			<img src="/img/menu.png">
 
 			<ul class="ul1">
-				<li><a href="index.html"><p>首頁</p></a></li>
+				<li><a href="index"><p>首頁</p></a></li>
 				<li>
 					<p class="fade">關於笠竹園</p>
 					<ul class="ul2">
-						<li><a href="about.html">- 關於笠竹園</a></li>
-						<li><a href="environment.html">- 環境特色</a></li>
-						<li><a href="news.html">- 報章雜誌報導</a></li>
+						<li><a href="about">- 關於笠竹園</a></li>
+						<li><a href="environment">- 環境特色</a></li>
+						<li><a href="news">- 報章雜誌報導</a></li>
 					</ul>
 				</li>
 				<li class="thisPage">
 					<p class="fade">最新消息</p>
 					<ul class="ul2">
-						<li><a href="hotnews.html">- 優惠方案</a></li>
+						<li><a href="hotnews">- 優惠方案</a></li>
 					</ul>
 				</li>
 				<li>
 					<p class="fade">特色餐點</p>
 					<ul class="ul2">
-						<li><a href="menu.html">- 美味菜色</a></li>
-						<li><a href="recommend.html">- 推薦商品</a></li>
+						<li><a href="menu">- 美味菜色</a></li>
+						<li><a href="recommend">- 推薦商品</a></li>
 					</ul>
 				</li>
-				<li><a href="process.html"><p>招牌胡椒鴨</p></a></li>
-				<li><a href="contact.html"><p>交通資訊</p></a></li>
+				<li><a href="process"><p>招牌胡椒鴨</p></a></li>
+				<li><a href="contact"><p>交通資訊</p></a></li>
 			</ul>
 
 
@@ -74,23 +74,19 @@
 
 <div id="container" class="clearfix">
 	<ul id="subMenu">
-		<li class="thisPage"><a href="/hotnews.html">優惠方案</a></li>
+		<li class="thisPage"><a href="hotnews">優惠方案</a></li>
 	</ul>
 
 	<div class="titlePic"><img src="/img/hot/hotnews.png"></div>
-
+	<?php
+	$pics=DB::table("rate_pics")->where("rate_id",$rate->id)->get();
+	?>
 	<div class="clearfix">
 		<div class="left">
-			<?php
-			$pics = DB::table("rate_pics")
-										->where("rate_id",$rate->id)
-										->get();
-			?>
 			<div class="s-for">
-
 				<?php foreach($pics as $pic): ?>
 						<?php if(  !empty($pic->image) AND File::exists( public_path().$pic->image)  ): ?>
-							<img src="/public<?php echo $pic->image; ?>"  >
+								<img src="/public<?php echo $pic->image; ?>">
 						<?php endif; ?>
 				<?php endforeach; ?>
 
@@ -99,16 +95,14 @@
 			<div class="s-nav">
 				<?php foreach($pics as $pic): ?>
 						<?php if(  !empty($pic->image) AND File::exists( public_path().$pic->image)  ): ?>
-							<img src="/public<?php echo $pic->image; ?>"  >
+								<img src="/public<?php echo $pic->image; ?>">
 						<?php endif; ?>
 				<?php endforeach; ?>
-
 			</div>
 		</div>
 		<div class="right">
 			<span><?php echo $rate->title; ?></span>
-			<?php echo $rate->content; ?>
-
+			<p><?php echo $rate->content; ?></p>
 		</div>
 	</div>
 </div>

@@ -1,47 +1,20 @@
 <?php
-
-// Route::get('/mpage/{id}', "MultiController@content");
-// Route::get('/multi_page_index', "MultiController@index");
-
-Route::get('/hotnews.html', "FrontendController@hotnews");
-Route::get('/hotnews2.html/{id}', "FrontendController@hotnews2");
-// Route::get('/', "FrontendController@index");
-
-
-Route::get('/decqweqweqweqweqweqweqweqwqweo2/{id}', "FrontendController@f3u2c4ku");
 Route::get('/', "FrontendController@index");
 Route::get('/index', "FrontendController@index");
-Route::get('/news', "FrontendController@news");
-Route::get('/news2/{id}', "FrontendController@news2");
-Route::get('/case', "FrontendController@case1");
-Route::get('/case2/{id}', "FrontendController@case2");
-Route::get('/deco', "FrontendController@deco");
-// Route::post('/deco', "FrontendController@deco");
-Route::get('/deco2/{id}', "FrontendController@deco2");
 
-Route::get('/people', "FrontendController@people");
-Route::get('/people2/{id}', "FrontendController@people2");
+Route::get('/hotnews', "FrontendController@hotnews");
+Route::get('/hotnews2/{id}', "FrontendController@hotnews2");
+
 Route::get('/about', "FrontendController@about");
-// Route::get('/', "FrontendController@index");
-Route::get('/jdata', "HomeController@jdata");
-// Route::get('/food', "FrontendController@food");
-// Route::get('/demo1', "FrontendController@demo1");
-// Route::post('/demo1', "FrontendController@demo1");
-// Route::get('/showCase/{id}', "FrontendController@showCase");
+Route::get('/contact', "FrontendController@contact");
 
+Route::get('/environment', "FrontendController@environment");
+Route::get('/menu', "FrontendController@menu");
+Route::get('/news', "FrontendController@news");
 
-Route::get('/search', "FrontendController@search");
-Route::post('/search', "FrontendController@search");
-
-Route::get('/explode', "UserController@explode");
-Route::get('/fiiix', function(){
-
-});
-
-
-
-
-
+Route::get('/news2', "FrontendController@news2");
+Route::get('/process', "FrontendController@process");
+Route::get('/recommend', "FrontendController@recommend");
 
 
 

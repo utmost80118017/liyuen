@@ -72,6 +72,27 @@ class FrontendController extends BaseController {
   		  return View::make('frontend.hotnews',$data);
   	}
 
+    public function news(){
+    		  $data = $this->init_date();
+          $data["rates"] = Rate::all();
+
+    		  return View::make('frontend.news',$data);
+    	}
+    public function about(){
+            $data = $this->init_date();
+            $data["rates"] = Rate::all();
+
+            return View::make('frontend.about',$data);
+    }
+
+  public function news2(){
+
+            $data = $this->init_date();
+            $data["rates"] = Rate::all();
+
+            return View::make('frontend.news2',$data);
+  }
+
 	public function hotnews2($id){
 
         $d=array("title"=>"about","ip"=>$_SERVER["REMOTE_ADDR"],"created_at"=>date("Y-m-d h:i:s"));
@@ -82,6 +103,45 @@ class FrontendController extends BaseController {
   		  return View::make('frontend.hotnews2',$data);
   	}
 
+    public function contact(){
+
+              $data = $this->init_date();
+              $data["rates"] = Rate::all();
+
+              return View::make('frontend.contact',$data);
+    }
+
+    public function environment(){
+
+              $data = $this->init_date();
+              $data["rates"] = Rate::all();
+
+              return View::make('frontend.environment',$data);
+    }
+
+    public function menu(){
+
+          $data = $this->init_date();
+          $data["rates"] = Rate::all();
+          return View::make('frontend.menu',$data);
+    }
+
+    public function process(){
+
+              $data = $this->init_date();
+              $data["rates"] = Rate::all();
+
+              return View::make('frontend.process',$data);
+    }
+
+    public function recommend(){
+
+              $data = $this->init_date();
+              $data["rates"] = Rate::all();
+
+              return View::make('frontend.recommend',$data);
+    }
+    // recommend.blade
 
 
     public function insertToExplode($d){

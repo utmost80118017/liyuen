@@ -5,16 +5,13 @@
 	<title>笠竹園</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<link rel="stylesheet" type="text/css" href="css/slick.css">
-	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
-
 	<link rel="stylesheet" type="text/css" href="css/default.css">
-	<link rel="stylesheet" type="text/css" href="css/hotnews.css">
+	<link rel="stylesheet" type="text/css" href="css/contact.css">
 
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/slick.js"></script>
 	<script src="js/script.js"></script>
+
 </head>
 <body>
 
@@ -47,7 +44,7 @@
 						<li><a href="news">- 報章雜誌報導</a></li>
 					</ul>
 				</li>
-				<li class="thisPage">
+				<li>
 					<p class="fade">最新消息</p>
 					<ul class="ul2">
 						<li><a href="hotnews">- 優惠方案</a></li>
@@ -61,7 +58,7 @@
 					</ul>
 				</li>
 				<li><a href="process"><p>招牌胡椒鴨</p></a></li>
-				<li><a href="contact"><p>交通資訊</p></a></li>
+				<li class="thisPage"><a href="contact"><p>交通資訊</p></a></li>
 			</ul>
 
 
@@ -74,33 +71,27 @@
 
 <div id="container" class="clearfix">
 	<ul id="subMenu">
-		<li class="thisPage"><a href="hotnews">優惠方案</a></li>
+		<li class="thisPage"><a href="contact">位置訊息</a></li>
 	</ul>
 
-	<div id="slickArea">
-		<div class="slick2">
+	<div class="map">
+		<img src="img/contact/map.png">
+		<img class="zoom" src="img/contact/zoom.png">
+	</div>
+	<div class="contact">
+		<img src="img/contact/logo.png">
+		<span>笠竹園客家風味餐廳</span>
+		<p>營業時間：</p>
+		<p>宅配全年無休</p>
+		<p>11:00-19:00 (假日、國定假日、連續假日、春節假期)</p>
+		<p>平日採預約制</p>
+		<p>(桌菜預定)</p>
+		<p class="tel"><u>TEL：0911-322-321</u></p>
+		<p>地址：新竹縣北埔鄉南興街110號</p>
 
-			@foreach($rates as $rate)
-				<div class="item">
-					<a href="/hotnews2/{{$rate->id}}">
-						<?php
-							$r_img = getRateImageType( $rate->id , 'setShow' );
-						?>
-
-						@if(  !empty($r_img->image) AND File::exists( public_path().$r_img->image)  )
-								<img src="/public{{$r_img->image}}">
-						@endif
-
-					</a>
-					<span>{{$rate->title}}</span>
-					<p>{{$rate->address}}</p>
-				</div>
-			@endforeach
-
-
+		<div class="content">
+			<p class="EN"><span>The Hakkas, sometimes Hakka Han,are Han Chinese people</span><span>whose ancestral homes are chiefly from the Hakka-speaking provincial</span></p>
 		</div>
-		<button id="prev"></button>
-		<button id="next"></button>
 	</div>
 </div>
 

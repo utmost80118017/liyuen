@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css">
 
 	<link rel="stylesheet" type="text/css" href="css/default.css">
-	<link rel="stylesheet" type="text/css" href="css/hotnews.css">
+	<link rel="stylesheet" type="text/css" href="css/recommend.css">
 
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
@@ -47,13 +47,13 @@
 						<li><a href="news">- 報章雜誌報導</a></li>
 					</ul>
 				</li>
-				<li class="thisPage">
+				<li>
 					<p class="fade">最新消息</p>
 					<ul class="ul2">
 						<li><a href="hotnews">- 優惠方案</a></li>
 					</ul>
 				</li>
-				<li>
+				<li class="thisPage">
 					<p class="fade">特色餐點</p>
 					<ul class="ul2">
 						<li><a href="menu">- 美味菜色</a></li>
@@ -74,30 +74,27 @@
 
 <div id="container" class="clearfix">
 	<ul id="subMenu">
-		<li class="thisPage"><a href="hotnews">優惠方案</a></li>
+		<li><a href="menu">美味菜色</a></li>
+		<li class="thisPage"><a href="recommend">推薦商品</a></li>
 	</ul>
 
+	<div class="titlePic"><img src="img/rec/title.png"></div>
+
 	<div id="slickArea">
-		<div class="slick2">
-
-			@foreach($rates as $rate)
-				<div class="item">
-					<a href="/hotnews2/{{$rate->id}}">
-						<?php
-							$r_img = getRateImageType( $rate->id , 'setShow' );
-						?>
-
-						@if(  !empty($r_img->image) AND File::exists( public_path().$r_img->image)  )
-								<img src="/public{{$r_img->image}}">
-						@endif
-
-					</a>
-					<span>{{$rate->title}}</span>
-					<p>{{$rate->address}}</p>
-				</div>
-			@endforeach
-
-
+		<img class="bg" src="img/rec/onion.png">
+		<div class="slick3">
+			<div class="item">
+				<img src="img/rec/1.png">
+				<span>柿餅雞湯</span>
+				<p>The Hakkas, sometimes Hakka Han,are Han Chinese people
+whose ancestral homes are chiefly from the Hakka-speaking provincial </p>
+			</div>
+			<div class="item">
+				<img src="img/rec/1.png">
+				<span>柿餅雞湯</span>
+				<p>The Hakkas, sometimes Hakka Han,are Han Chinese people
+whose ancestral homes are chiefly from the Hakka-speaking provincial </p>
+			</div>
 		</div>
 		<button id="prev"></button>
 		<button id="next"></button>
